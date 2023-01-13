@@ -296,9 +296,21 @@ Use addArtist to do the following:
 5. Add the newly created object to the copied array, then return the copied array
 🌟 EXAMPLE: Invoking addArtist(artists, 'John Doe', '1988-2022', 'Full Stack Development', 'African American', 'I have a background in customer service at Big Retail Chain. I am attending BloomTech to become a Frontend Developer.') should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(artistArray, name, years, genre, nationality, bio) {
+  let newArtistArray = artistArray;
+  // Create new Artist Object
+  let newArtist = {
+    name: name,
+    years: years,
+    genre: genre,
+    nationality: nationality,
+    bio: bio
+  }
+  // Add the new Artist to Artist Array
+  newArtistArray = newArtistArray.concat(newArtist);
+  return newArtistArray;
 }
+console.log(addArtist(artists, "Isaac", "2001 - Present Day", "Web Design", "American", "A super cool, future Software Engineer"));
 
 
 
