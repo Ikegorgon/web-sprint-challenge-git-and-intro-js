@@ -370,9 +370,17 @@ Use artistByCountry to do the following:
 🌟 EXAMPLE: Invoking artistByCountry(artists, 'Spanish') will return: [ 'Salvador Dali', 'Pablo Picasso', 'Francisco Goya']
 */
 
-function artistByCountry(/*Your Code Here*/){
-  /*Your Code Here*/
+function artistByCountry(artistArray, nationality){
+  let newArtistArray = [];
+  // If Artist Nationality is the same, Add Artist to new Array
+  for (let artist in artistArray) {
+    if (artistArray[artist].nationality === nationality) {
+      newArtistArray = newArtistArray.concat(artistArray[artist].name);
+    }
+  }
+  return newArtistArray;
 }
+console.log(artistByCountry(artists, "Spanish"));
 
 
 
